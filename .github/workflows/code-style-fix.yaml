@@ -59,11 +59,9 @@ jobs:
       - name: Run Prettier
         id: prettier-run
         run: |
-          set +e
           prettier --check . --ignore-unknown --write 
-          exitcode="$?"
+          git status -s -uno | wc -l
           echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
-          exit "$exitcode"
       - name: Commit changes
         if: ${{ steps.prettier-run.outputs.exitcode == '1' }} 
         run: |
