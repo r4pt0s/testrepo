@@ -1,19 +1,19 @@
 {
-  "name": "testrepo",
-  "homepage": "https://r4pt0s.github.io/testrepo",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "prettier": "npx prettier src --check",
-    "prettier:fix": "npm run prettier -- --write"
-  },
-  "devDependencies": {
-    "prettier": "^3.3.3",
-    "terser": "^5.32.0",
-    "vite": "^5.4.1"
-  }
+    "name": "testrepo",
+    "homepage": "https://r4pt0s.github.io/testrepo",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "prettier": "npx prettier src --check",
+        "prettier:fix": "npm run prettier -- --write"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "terser": "^5.32.0",
+        "vite": "^5.4.1"
+    }
 }
