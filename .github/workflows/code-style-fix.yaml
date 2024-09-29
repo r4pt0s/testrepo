@@ -52,9 +52,7 @@ jobs:
       - name: Install dependencies
         run: npm install -g prettier
       - name: Run Prettier
-        run: prettier --check .
-      - name: Run Prettier
-        run: prettier --write .
+        run: prettier --config ./.prettierrc.js --write .
       - name: Commit changes
         run: |
           git config --global user.email "r4pt0s@protonmail.com"
