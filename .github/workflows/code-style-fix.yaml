@@ -60,10 +60,9 @@ jobs:
         id: prettier-run
         run: |
           prettier --check . --ignore-unknown --write 
-          git status -s -uno | wc -l
-          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+          echo "filecount=$(git status -s -uno | wc -L)" >> $GITHUB_OUTPUT
       - name: Commit changes
-        if: ${{ steps.prettier-run.outputs.exitcode == '1' }} 
+        if: ${{ steps.prettier-run.outputs.filecount > 0 }} 
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions - Prettier"
