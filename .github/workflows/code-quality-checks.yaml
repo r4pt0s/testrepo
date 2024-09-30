@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install dependencies
-        run: npm install -g eslint
+        run: npm install -g eslint globals
       - name: Check with eslint
         id: eslint-run
         run: |
