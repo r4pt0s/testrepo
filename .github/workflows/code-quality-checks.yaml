@@ -2,6 +2,9 @@ name: Code Quality Checks
 
 on:
   pull_request:
+    types:
+      - opened
+      - synchronize
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
