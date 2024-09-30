@@ -2,6 +2,9 @@ name: Code Quality Checks
 
 on:
   pull_request:
+    types:
+      - opened
+      - synchronize
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -17,8 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install dependencies
-        run: npm install eslint globals
+        run: npm install
       - name: Check with eslint
         id: eslint-run
         run: |
           npx eslint
+      - name: Check with prettier
+        id: prettier-run
+        run: |
+          npx prettier --check .
